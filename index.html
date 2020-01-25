@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav id="nav" class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="./" class="brand-logo center">
+            <span id="logo-title">To Do</span>
+            <!--<img id="logo-img" src="/img/logo.png" alt="">-->
+        </a>
+    </div>
+</nav>
+
+
+<main>
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+
+                <div class="col s12">
+                    <a id="add-task" class="waves-effect waves-teal btn-flat">
+                        <i class="material-icons right">create</i>
+                        New
+                    </a>
+                        <a id="import-tasks" class="waves-effect waves-teal btn-flat">
+                            <i class="material-icons right">import_export</i>
+                            Import
+                        </a>
+                    <a id="export-tasks" class="waves-effect waves-teal btn-flat">
+                        <i class="material-icons right">save_alt</i>
+                        Export
+                    </a>
+                </div>
+
+                <input style="display: none;" accept="application/json,*.json" type="file" name="import-file" id="import-file">
+
+            </div>
+
+            <div class="row task-row">
+
+                <template id="task-template">
+                    <div class="row task">
+                        <div class="content" style="display: flex;">
+                            <div class="col xl2 m2 s12">
+                                <div class="title-and-value">
+                                    <p class="result-title">Status</p>
+                                    <label class="result-value task-status-container">
+                                        <input data-status="" class="task-status" type="checkbox" />
+                                        <span>&nbsp;</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col xl3 m4 s12">
+                                <div class="title-and-value">
+                                    <p class="result-title">Task</p>
+                                    <p spellcheck="false" contenteditable="true" class="result-value task-body"></p>
+                                </div>
+                            </div>
+                            <div class="col xl2 m3 s12">
+                                <div class="title-and-value">
+                                    <p class="result-title">Created</p>
+                                    <p datetime="" data-unix="" class="result-value task-created render_date"></p>
+                                </div>
+                            </div>
+                            <div class="col xl2 m2 s12 del-task-col">
+                                <a class="waves-effect waves-teal btn-flat delete-task">
+                                    <i class="material-icons right">delete</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+
+<footer id="footer" class="page-footer orange">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">To Do</h5>
+                <p class="grey-text text-lighten-4">Tekst</p>
+
+
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Overskrift</h5>
+                <ul>
+                    <li><a class="white-text" target="_blank" href="#">Link</a></li>
+                    <li><a class="white-text" target="_blank" href="#">Link</a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Overskrift</h5>
+                <ul>
+                    <li><a class="white-text" target="_blank" href="#">Link</a></li>
+                    <li><a class="white-text" target="_blank" href="#">Link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="assets/js/TaskManager.js"></script>
+<script src="assets/js/Task.js"></script>
+<script src="assets/js/settings.js"></script>
+<script src="assets/js/libs/tinysort.min.js"></script>
+<script src="assets/js/libs/timeago/timeago.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="assets/js/libs/materialize.min.js"></script>
+<script src="assets/js/libs/moment.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/task-list-responsive.js"></script>
+</body>
+</html>

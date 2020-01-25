@@ -1,0 +1,102 @@
+:root {
+    --main-bg-color: #121212;
+    --secondary-bg-color: #1D1D1D;
+}
+
+body {
+    font-family: 'Open Sans';
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: #d8d8d8;
+    background-color: var(--main-bg-color);
+}
+
+main {
+    flex: 1 0 auto;
+    padding-top: 3rem;
+}
+
+#import-tasks, #export-tasks, #add-task {
+    color: #03a9f4;
+    font-size: 1.3rem;
+}
+
+.delete-task {
+    color: #F44336;
+}
+
+.delete-task i {
+    margin: 0;
+}
+
+.task-status-container span {
+    transform: translateX(calc(50% - 9px));
+}
+
+p.result-value.task-body {
+    cursor: text;
+    border: 1px solid transparent;
+    text-overflow: ellipsis;
+    max-height: 24px;
+    overflow: overlay;
+}
+
+p.result-value.task-body:hover {
+    border: 1px solid #fffcfc08;
+}
+
+.col.s12 {
+    text-align: center;
+}
+
+#nav, #footer {
+    background-color: var(--secondary-bg-color) !important;
+}
+
+.row.task .content {
+    height: 121px;
+}
+
+.row.task .content div {
+    background: var(--secondary-bg-color);
+    height: 100%;
+}
+
+.task .content .del-task-col {
+    vertical-align: middle;
+    line-height: 121px;
+}
+
+.task .content .col, .task .title-and-value, .task .title-and-value p {
+    padding: 0;
+    margin: 0;
+}
+
+.task .title-and-value {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.task .result-title {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.tasks-row {
+    margin-top: 2.5rem;
+}
+
+.task .content {
+    display: flex;
+    justify-content: center;
+}
+
+.task-container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 75%;
+}
+
+
